@@ -23,7 +23,10 @@ public class FlashingItemEntityRenderer extends ItemEntityRenderer {
             if (ClearDespawnReworkedClient.config.flashingEnabled) {
                 final int remainingTime = ClearDespawnReworkedClient.config.despawnAge - entity.getItemAge();
                 if (remainingTime < ClearDespawnReworkedClient.config.getFlashStartTime() && remainingTime > 0) {
-                    final int flashSpeed = ClearDespawnReworkedClient.config.getFlashSpeed();
+                    int flashSpeed = ClearDespawnReworkedClient.config.getFlashSpeed();
+                    if (ClearDespawnReworkedClient.config.urgentFlashing) {
+                        flashSpeed = Math.max(3, remainingTime / ClearDespawnReworkedClient.config.getFlashSpeed());
+                    }
                     if (remainingTime % flashSpeed <
                             ClearDespawnReworkedClient.config.getDisappearTime() * flashSpeed) {
                         this.shadowOpacity = ClearDespawnReworkedClient.config.getDisappearItemShadowOpacity();

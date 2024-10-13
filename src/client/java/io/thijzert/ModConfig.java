@@ -14,6 +14,7 @@ public class ModConfig implements ConfigData {
     public boolean modEnabled = true;
     public boolean flashingEnabled = true;
     public int despawnAge = 6000; // game ticks
+    public boolean urgentFlashing = true;
     @ConfigEntry.BoundedDiscrete(min = 1, max = 300)
     public int flashStartTime = 15; // seconds
     @ConfigEntry.BoundedDiscrete(min = minFlashSpeed, max = maxFlashSpeed)

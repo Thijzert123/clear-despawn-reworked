@@ -6,6 +6,7 @@
   "text.autoconfig.clear-despawn-reworked.option.modEnabled": "Mod enabled",
   "text.autoconfig.clear-despawn-reworked.option.flashingEnabled": "Item flashing enabled",
   "text.autoconfig.clear-despawn-reworked.option.despawnAge": "Despawn time (ticks)",
+  "text.autoconfig.clear-despawn-reworked.option.urgentFlashing": "Urgent flashing",
   "text.autoconfig.clear-despawn-reworked.option.flashStartTime": "Start flashing when this time remains (seconds)",
   "text.autoconfig.clear-despawn-reworked.option.flashSpeed": "Flashing speed",
   "text.autoconfig.clear-despawn-reworked.option.disappearTime": "Time item disappears (%)",
