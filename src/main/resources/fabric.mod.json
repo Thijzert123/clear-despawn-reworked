@@ -1,0 +1,45 @@
+{
+	"schemaVersion": 1,
+	"id": "clear-despawn-reworked",
+	"version": "${version}",
+	"name": "Clear Despawn Reworked",
+	"description": "Items flash when they almost despawn, configurable.",
+	"authors": [
+		"Thijzert"
+	],
+	"contact": {
+		"homepage": "https://modrinth.com/mod/clear-despawn-reworked",
+		"sources": "https://example.com/notyetpublished"
+	},
+	"license": "MIT",
+	"icon": "assets/clear-despawn-reworked/icon.png",
+	"environment": "client",
+	"entrypoints": {
+		"main": [
+			"io.thijzert.ClearDespawnReworked"
+		],
+		"client": [
+			"io.thijzert.ClearDespawnReworkedClient"
+		],
+		"modmenu": [
+			"io.thijzert.ModMenuIntegration"
+		]
+	},
+	"mixins": [
+		"clear-despawn-reworked.mixins.json",
+		{
+			"config": "clear-despawn-reworked.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": "*",
+		"minecraft": ">=1.21",
+		"java": ">=21",
+		"fabric-api": "*",
+		"cloth-config": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}

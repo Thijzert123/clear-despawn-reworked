@@ -1,0 +1,14 @@
+{
+  "category.clear-despawn-reworked.keybindings": "Clear Despawn Reworked",
+  "key.clear-despawn-reworked": "Open Config",
+
+  "text.autoconfig.clear-despawn-reworked.title": "Clear Despawn Reworked Settings",
+  "text.autoconfig.clear-despawn-reworked.option.modEnabled": "Mod enabled",
+  "text.autoconfig.clear-despawn-reworked.option.flashingEnabled": "Item flashing enabled",
+  "text.autoconfig.clear-despawn-reworked.option.despawnAge": "Despawn time (ticks)",
+  "text.autoconfig.clear-despawn-reworked.option.flashStartTime": "Start flashing when this time remains (seconds)",
+  "text.autoconfig.clear-despawn-reworked.option.flashSpeed": "Flashing speed",
+  "text.autoconfig.clear-despawn-reworked.option.disappearTime": "Time item disappears (%)",
+  "text.autoconfig.clear-despawn-reworked.option.defaultItemShadowOpacity": "Default item shadow opacity (%)",
+  "text.autoconfig.clear-despawn-reworked.option.disappearItemShadowOpacity": "Item shadow opacity when disappeared (%)"
+}
