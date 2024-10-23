@@ -13,4 +13,4 @@ git clone https://github.com/Thijzert123/clear-despawn-reworked.git
 cd clear-despawn-reworked
 ./gradlew build
 ```
-Jar will be located at build/libs/clear-despawn-reworked-x.x.x.jar
+Jar will be located at `build/libs/clear-despawn-reworked-x.x.x.jar`
