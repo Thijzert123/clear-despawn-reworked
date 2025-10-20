@@ -10,6 +10,7 @@ import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.option.KeyBinding;
 import net.minecraft.client.util.InputUtil;
 import net.minecraft.entity.EntityType;
+import net.minecraft.util.Identifier;
 import org.lwjgl.glfw.GLFW;
 
 public class ClearDespawnReworkedClient implements ClientModInitializer {
@@ -28,7 +29,7 @@ public class ClearDespawnReworkedClient implements ClientModInitializer {
 				"key.clear-despawn-reworked",
 				InputUtil.Type.KEYSYM,
 				GLFW.GLFW_KEY_UNKNOWN,
-				"category.clear-despawn-reworked.keybindings"
+				new KeyBinding.Category(Identifier.of("category.clear-despawn-reworked.keybindings"))
 		));
 		ClientTickEvents.END_CLIENT_TICK.register(client -> {
 			while (configKeyBinding.wasPressed()) {

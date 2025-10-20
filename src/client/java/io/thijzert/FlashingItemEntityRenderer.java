@@ -1,10 +1,12 @@
 package io.thijzert;
 
 import net.minecraft.client.render.VertexConsumerProvider;
+import net.minecraft.client.render.command.OrderedRenderCommandQueue;
 import net.minecraft.client.render.entity.EntityRenderer;
 import net.minecraft.client.render.entity.EntityRendererFactory;
 import net.minecraft.client.render.entity.ItemEntityRenderer;
 import net.minecraft.client.render.entity.state.ItemEntityRenderState;
+import net.minecraft.client.render.state.CameraRenderState;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.entity.ItemEntity;
 
@@ -24,8 +26,8 @@ public class FlashingItemEntityRenderer extends ItemEntityRenderer {
     @Override
     public void render(final ItemEntityRenderState state,
                        final MatrixStack matrixStack,
-                       final VertexConsumerProvider vertexConsumerProvider,
-                       final int packedLight) {
+                       final OrderedRenderCommandQueue orderedRenderCommandQueue,
+                       final CameraRenderState cameraRenderState) {
         if (ClearDespawnReworkedClient.config.modEnabled) {
             if (ClearDespawnReworkedClient.config.flashingEnabled) {
                 final int remainingTime = ClearDespawnReworkedClient.config.despawnAge - entity_.getItemAge();
@@ -45,7 +47,7 @@ public class FlashingItemEntityRenderer extends ItemEntityRenderer {
         } else {
             this.shadowOpacity = 0.75F;
         }
-        super.render(state, matrixStack, vertexConsumerProvider, packedLight);
+        super.render(state, matrixStack, orderedRenderCommandQueue, cameraRenderState);
     }
 
     public static class Factory implements EntityRendererFactory<ItemEntity> {
